@@ -1,0 +1,22 @@
+{
+  "name": "holdcontract",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "app": "node index.js",
+    "ganache": "ganache-cli -m 'electric gift gold bitter boring surface stumble swift peanut adult horse dish'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.3.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "web3": "^1.5.2"
+  },
+  "devDependencies": {
+    "ganache-cli": "^6.12.2"
+  }
+}
