@@ -110,9 +110,10 @@ class Server {
           });
         } else if (num == 4) {
           games.get(game_id).push(address);
-          contract.hold(address, address_owner, 5, game_id);
+          holds.get(game_id).push(holdId);
+          contract.hold(address, address_owner, 5, holdId);
 
-          let winner = Math.random() * 4;
+          let winner = Math.floor(Math.random() * 4);
           let winner_address = games.get(game_id)[winner];
 
           for (let index = 1; index < 4; index++) {
@@ -127,12 +128,12 @@ class Server {
 
           res.json({
             game_id: game_id,
-            winner: winner,
+            winner_address: winner_address,
           });
         } else {
           res.json({
             game_id: game_id,
-            players: "juego completo",
+            players: "Game already finish",
           });
         }
       } else {
