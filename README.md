@@ -107,3 +107,10 @@ truffle deploy --reset --network development
     "username": "andrea"
 }
 ```
+## [http://localhost:8080/my-balance](http://localhost:8080/my-bets)
+
+```jsx
+{
+    "username": "david"
+}
+```
